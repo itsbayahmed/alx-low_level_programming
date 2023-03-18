@@ -16,6 +16,7 @@ int main(void)
 	{
 		if (c != d && c != f)
 		putchar(c);
+		c = c + 1;
 	}
 	putchar('\n');
 	return (0);
