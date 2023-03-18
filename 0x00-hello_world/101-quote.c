@@ -7,5 +7,6 @@
 int main(void)
 {
 	fprintf(stderr, "nd that piece of art is useful\" - Dora Korpar, 2015-10-19");
+	putchar('\n');
 	return (1);
 }
