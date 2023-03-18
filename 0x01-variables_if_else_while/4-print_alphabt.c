@@ -12,7 +12,7 @@ int main(void)
 	char d = 'e';
 	char f = 'q';
 
-	while (c <= z)
+	while (c <= 'z')
 	{
 		if (c != d && c != f)
 		putchar(c);
