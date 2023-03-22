@@ -10,7 +10,6 @@
  */
 int _islow(int c)
 {
-	int c;
 	char a;
 
 	if (a >= 'a' && a <= 'z')
