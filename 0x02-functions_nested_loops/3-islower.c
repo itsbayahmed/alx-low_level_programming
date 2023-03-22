@@ -10,13 +10,13 @@
  */
 int _islow(int c)
 {
-	char c;
+	char a;
 
-	if (c >= 'a' && c <= 'z')
+	if (a >= 'a' && a <= 'z')
 		{
 		_putchar(48 + 1);
 		}
-	else if (c >= 'A' && c <= 'Z')
+	else if (a >= 'A' && a <= 'Z')
 	{
 		_putchar(48 + 0);
 	}
