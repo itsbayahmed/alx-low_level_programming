@@ -4,16 +4,15 @@
  *
  * @n: the integer to check.
  *
- * Return: always 0
+ * Return: "n" if the integer is posotive,
+ * "-n" if it's negative, or "0" if it's equal to zero.
  */
 int _abs(int n)
 {
-	if (n > 0 || n == 0)
-		_putchar('0' + n);
+	if (n > 0)
+		return (n);
+	else if (n < 0)
+		return (-n);
 	else
-	{
-		n = -n;
-		_putchar('0' + n);
-	}
-	return (0);
+		return (0);
 }
