@@ -10,17 +10,20 @@
  */
 int _islow(int c)
 {
+	int c;
 	char a;
 
 	if (a >= 'a' && a <= 'z')
 		{
-		_putchar(48 + 1);
+		c = 1;
+		_putchar(c);
 		}
+
 	else if (a >= 'A' && a <= 'Z')
 	{
-		_putchar(48 + 0);
+		c = 0;
+		_putchar(c);
 	}
 	return (0);
 }
-			}
 
