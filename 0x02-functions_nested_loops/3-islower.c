@@ -11,7 +11,7 @@
  */
 int _islow(int c)
 {
-	if ((islower(c))
+	if ((islower(c)))
 			_putchar(48 + 1);
 			else
 			_putchar(48 + 0);
