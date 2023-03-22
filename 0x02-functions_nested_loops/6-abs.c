@@ -2,14 +2,12 @@
 /**
  * _abs - Print the absolue value of an integer.
  *
- * @int: the integer to check.
+ * @n: the integer to check.
  *
  * Return: always 0
  */
-int _abs(int)
+int _abs(int n)
 {
-	int n;
-
 	if (n > 0 || n == 0)
 		_putchar('0' + n);
 	else
