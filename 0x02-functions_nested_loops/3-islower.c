@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include "main.h"
 /**
  * _islow - a function that checks if a character is lowercase or no.
@@ -11,10 +10,17 @@
  */
 int _islow(int c)
 {
-	if ((islower(c)))
-			_putchar(48 + 1);
-			else
-			_putchar(48 + 0);
-			return (0);
+	char c;
+
+	if (c >= 'a' && c <= 'z')
+		{
+		_putchar(48 + 1);
+		}
+	else if (c >= 'A' && c <= 'Z')
+	{
+		_putchar(48 + 0);
+	}
+	return (0);
+}
 			}
 
