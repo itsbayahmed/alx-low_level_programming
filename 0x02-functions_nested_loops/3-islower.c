@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islow - a function that checks if a character is lowercase or no.
+ * _islower - a function that checks if a character is lowercase or no.
  *
  * @c: is the character to check.
  *
@@ -8,20 +8,25 @@
  *
  * Return: Always 0
  */
-int _islow(int c)
+int _islower(int c)
 {
 	char a;
 
-	if (a >= 'a' && a <= 'z')
+	a = 'a';
+	if (a <= 'z')
 		{
 		c = 1;
-		_putchar(c);
+		_putchar('0' + c);
 		}
 
-	else if (a >= 'A' && a <= 'Z')
+	else
+	{
+		a = 'A';
+		if (a <= 'Z')
 	{
 		c = 0;
-		_putchar(c);
+		_putchar('0' + c);
+	}
 	}
 	return (0);
 }
