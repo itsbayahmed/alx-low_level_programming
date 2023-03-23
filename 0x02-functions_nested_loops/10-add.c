@@ -2,7 +2,7 @@
 /**
  * add - A function that returns the sum of two integers a and b.
  *
- * @a! The first integer.
+ * @a: The first integer.
  *
  * @b: The second integer.
  *
@@ -10,5 +10,5 @@
  */
 int add(int a, int b)
 {
-	return(a +b);
+	return (a + b);
 }
