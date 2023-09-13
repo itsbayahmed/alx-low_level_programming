@@ -1,5 +1,26 @@
 #include "main.h"
 #include <stdlib.h>
+
+/**
+ * _strlen - A function that returns the length of a string.
+ *
+ * @s: The string whose length is to be returned.
+ *
+ * Return: The string length.
+ */
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (*s != '\0')
+	{
+		s++;
+		length++;
+	}
+
+	return (length);
+
+}
 /**
  * _strdup - A function that returns a pointer to a newly allocated space
  * in memory, which contains a copy of the string given as a parameter.
@@ -13,16 +34,17 @@
 char *_strdup(char *str)
 {
 	char *s;
-	unsigned long i;
+	int i, len;
 
 	s = malloc(sizeof(str));
+	len = _strlen(str);
 
 	if ((str == NULL) || (s == NULL))
 		return (NULL);
 
 	else
 	{
-		for (i = 0; i < sizeof(str); i++)
+		for (i = 0; i < len; i++)
 		{
 			s[i] = str[i];
 		}
