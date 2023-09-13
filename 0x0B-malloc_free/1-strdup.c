@@ -34,14 +34,20 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	char *s;
-	int i, len;
+	unsigned long i, len;
 
-	s = malloc(sizeof(str));
 	len = _strlen(str);
 
-	if ((str == NULL) || (s == NULL))
-		return (NULL);
+	s = malloc(len * sizeof(char));
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	if (s == NULL)
+	{
+		return (NULL);
+	}
 	else
 	{
 		for (i = 0; i < len; i++)
