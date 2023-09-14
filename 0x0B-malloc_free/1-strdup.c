@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * _strlen - A function that returns the length of a string.
  *
@@ -33,18 +33,18 @@ int _strlen(char *s)
 
 char *_strdup(char *str)
 {
-	char *s;
+	char *new_str;
 	unsigned long i, len;
-
-	len = _strlen(str);
-
-	s = malloc((len + 1) * sizeof(char));
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	if (s == NULL)
+
+	len = _strlen(str);
+
+	new_str = malloc((len + 1) * sizeof(char));
+	if (new_str == NULL)
 	{
 		return (NULL);
 	}
@@ -52,8 +52,8 @@ char *_strdup(char *str)
 	{
 		for (i = 0; i < len; i++)
 		{
-			s[i] = str[i];
+			new_str[i] = str[i];
 		}
-		return (s);
+		return (new_str);
 	}
 }
