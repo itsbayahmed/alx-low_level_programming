@@ -14,24 +14,17 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *arr;
-	unsigned int i;
 
-	arr = malloc(nmemb * size);
-	memset(arr, 0, (nmemb * size));
-	if (arr == NULL)
-	{
-		return (NULL);
-	}
 	if (size == 0 || nmemb == 0)
 	{
 		return (NULL);
 	}
-	else
+	arr = malloc(nmemb * size);
+
+	if (arr == NULL)
 	{
-		for (i = 0; i < size; i++)
-		{
-			arr[i] = nmemb;
-		}
+		return (NULL);
 	}
+	memset(arr, 0, (nmemb * size));
 	return (arr);
 }
