@@ -1,5 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
+
+/**
+ * _strlen - A function that returns the length of a string.
+ *
+ * @s: The string whose length is to be returned.
+ *
+ * Return: The string length.
+ */
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (*s != '\0')
+	{
+		s++;
+		length++;
+	}
+
+	return (length);
+
+}
+
 /**
  * main - Entry point.
  *
@@ -13,7 +36,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum;
+	int i, j, sum;
 
 	sum = 0;
 	if (argc == 1)
@@ -25,15 +48,15 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (!(*argv[i] >= '0' && *argv[i] <= '9'))
+			for (j = 0; j < _strlen(argv[i]); j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (!(argv[i][j] >= '0' && argv[i][j] <= '9'))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-			else
-			{
-				sum += atoi(argv[i]);
-			}
+			sum += atoi(argv[i]);
 		}
 		printf("%d\n", sum);
 		return (0);
