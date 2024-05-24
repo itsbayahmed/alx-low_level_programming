@@ -3,4 +3,5 @@
 
 int _putchar(int c);
 int _strlen(char *s);
+int change(int *money, int coin);
 #endif
