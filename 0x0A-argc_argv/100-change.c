@@ -1,6 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * change - A helper function that calculate the minimum number of coins
+ *  to make change for an amount of money.
+ *
+ * @money: A pointer to an integer that represnts the amount of money.
+ * @coin: The value of the coin denomination.
+ *
+ * Return: The number of coins that can be made from the given amount of money.
+ */
+int change(int *money, int coin)
+{
+	int cents = 0;
+
+	while (*money >= coin)
+	{
+		cents += 1;
+		*money = *money - coin;
+	}
+	return (cents);
+}
+/**
  * main - Entry point
  * @argc: An integer that represents the number of command-line arguments
  *  passed to the program.
@@ -14,41 +34,28 @@ int main(int argc, char *argv[])
 {
 	int cents = 0, money;
 
-	money = atoi(argv[1]);
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else if (money < 0)
-	{
-		printf("0\n");
-	}
 	else
 	{
-		while (money >= 25)
+		money = atoi(argv[1]);
+		if (money < 0)
 		{
-			cents += 1;
-			money = money - 25;
+			printf("0\n");
+			return (0);
 		}
-		while (money >= 10)
+		else
 		{
-			cents += 1;
-			money = money - 10;
+			cents += change(&money, 25);
+			cents += change(&money, 10);
+			cents += change(&money, 5);
+			cents += change(&money, 2);
+			cents += change(&money, 1);
 		}
-		while (money >= 5)
-		{
-			cents += 1;
-			money = money - 5;
-		}
-		while (money >= 2)
-		{
-			cents += 1;
-			money = money - 2;
-		}
-		cents += money;
-		money = 0;
-	}
 	printf("%d\n", cents);
 	return (0);
+}
 }
