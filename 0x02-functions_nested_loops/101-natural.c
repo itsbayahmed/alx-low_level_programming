@@ -15,10 +15,11 @@ int sum_of_multiples(int n)
 	int i = 0;
 	int result = 0;
 
-	while (i < n && ((i % 3 == 0) || (i % 5 == 0)))
+	while (i < n)
 	{
+	if ((i % 3 == 0) || (i % 5 == 0))
 		result += i;
-		i++;
+	i++;
 	}
 	printf("%d\n", result);
 	return (0);
