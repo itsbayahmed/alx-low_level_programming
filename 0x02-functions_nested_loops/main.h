@@ -15,4 +15,5 @@ void print_to_98(int n);
 void print_times_table(int n);
 int sum_of_multiples(int n);
 void fibonacci(int n);
+void fibonacci_fun(int n);
 #endif
