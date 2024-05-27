@@ -16,4 +16,5 @@ void print_times_table(int n);
 int sum_of_multiples(int n);
 void fibonacci(int n);
 void fibonacci_fun(int n);
+void fibonacci_large(int n);
 #endif
